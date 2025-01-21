@@ -1,0 +1,23 @@
+[
+    {
+        "pergunta": "Qual é a capital do Brasil?",
+        "respostas": ["Rio de Janeiro", "Brasília", "São Paulo", "Belo Horizonte"],
+        "correta": "Brasília"
+    },
+    {
+        "pergunta": "Quantos continentes existem?",
+        "respostas": ["5", "6", "7", "8"],
+        "correta": "7"
+    },
+    {
+        "pergunta": "Qual é o maior planeta do sistema solar?",
+        "respostas": ["Terra", "Júpiter", "Saturno", "Marte"],
+        "correta": "Júpiter"
+    },
+
+    {
+        "pergunta": "Quanto é 1+1?",
+        "respostas": ["2", "3", "4", "5"],
+        "correta": "2"
+    }
+]
