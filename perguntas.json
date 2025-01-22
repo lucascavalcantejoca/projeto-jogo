@@ -1,23 +1,66 @@
 [
     {
-        "pergunta": "Qual é a capital do Brasil?",
-        "respostas": ["Rio de Janeiro", "Brasília", "São Paulo", "Belo Horizonte"],
-        "correta": "Brasília"
-    },
-    {
-        "pergunta": "Quantos continentes existem?",
-        "respostas": ["5", "6", "7", "8"],
-        "correta": "7"
-    },
-    {
-        "pergunta": "Qual é o maior planeta do sistema solar?",
-        "respostas": ["Terra", "Júpiter", "Saturno", "Marte"],
-        "correta": "Júpiter"
+        "pergunta": "O que significa a sigla DOM no JavaScript?",
+        "respostas": ["Document Object Model", "Data Object Management", "Document Object Mapping", "Document Operation Model"],
+        "correta": "Document Object Model"
     },
 
     {
-        "pergunta": "Quanto é 1+1?",
-        "respostas": ["2", "3", "4", "5"],
-        "correta": "2"
+        "pergunta": "Como declaramos uma função em JavaScript?",
+        "respostas": ["function nomeDaFuncao() {}","def nomeDaFuncao() {}","function: nomeDaFuncao() {}","fun nomeDaFuncao() {}"],
+        "correta": "function nomeDaFuncao() {}"
+    },
+
+    {
+        "pergunta": "Qual é a diferença entre let e var?",
+        "respostas": ["let tem escopo de bloco, enquanto var tem escopo de função","Não há diferença","Ambos têm escopo global","let é usado para constantes, var para variáveis"],
+        "correta": "et tem escopo de bloco, enquanto var tem escopo de função"
+    },
+
+    {
+        "pergunta": "Qual evento é disparado ao clicar em um elemento?",
+        "respostas": ["onclick", "onhover", "onpress", "onmousedown"],
+        "correta": "onclick"
+    },
+    {
+        "pergunta": "Qual propriedade CSS é usada para alterar a cor do texto?",
+        "respostas": ["text-color", "background-color", "color", "font-color"],
+        "correta": "color"
+    },
+
+    {
+        "pergunta": "Qual propriedade CSS é usada para alterar o tamanho da fonte?",
+        "respostas": ["size", "text-size", "font-weight", "font-size"],
+        "correta": "font-size"
+    },
+
+    {
+        "pergunta": "Qual tag é usada para criar um link em HTML?",
+        "respostas": ["<link>", "<a>", "<href>", "<url>"],
+        "correta": "<a>"
+    },
+
+    {
+        "pergunta": "Qual a função da tag <title> em um documento HTML?" ,
+        "respostas": ["Adicionar um cabeçalho na página", "Definir o título exibido no navegador", "Adicionar um rodapé na página", "Alterar o idioma da página"],
+        "correta": "Definir o título exibido no navegador"
+    },
+
+    {
+        "pergunta": "Qual é o significado da sigla HTML?",
+        "respostas": ["HyperText Markup Language","HyperText Modeling Language", "HyperText Management Language", "Hyper Transfer Markup Language"],
+        "correta": "HyperText Markup Language"
+    },
+
+    {
+        "pergunta": "",
+        "respostas": ["","","",""],
+        "correta": ""
+    },
+
+    {
+        "pergunta": "",
+        "respostas": ["","","",""],
+        "correta": ""
     }
 ]

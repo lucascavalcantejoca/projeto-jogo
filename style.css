@@ -20,7 +20,7 @@ body {
     grid-template-columns: 1fr 1fr;
     width: 100vw;
     height: 30vh;
-    transform: translateY(8em);
+    transform: translateY(5em);
     
 }
 
@@ -34,12 +34,12 @@ button {
     background-color: rgb(0, 132, 255);
     color: white;
     justify-self: center;
-
+    
     padding: 10px;
     transition: .2s;
     width: 500px;
     height: 50px;
-    margin: 20px;
+    margin: auto;
     
 }
 
