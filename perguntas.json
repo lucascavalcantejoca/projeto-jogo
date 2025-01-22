@@ -53,14 +53,14 @@
     },
 
     {
-        "pergunta": "",
-        "respostas": ["","","",""],
-        "correta": ""
+        "pergunta": "Qual é a finalidade da propriedade z-index em CSS?",
+        "respostas": ["Alterar a opacidade de um elemento","Controlar o espaçamento entre elementos","Controlar a sobreposição de elementos","Definir o tamanho de um elemento"],
+        "correta": "Controlar a sobreposição de elementos"
     },
 
     {
-        "pergunta": "",
-        "respostas": ["","","",""],
-        "correta": ""
+        "pergunta": "Qual é a tag HTML usada para inserir uma linha horizontal na página?",
+        "respostas": ["<line>","<hr>","<br>","<border>"],
+        "correta": "<hr>"
     }
 ]

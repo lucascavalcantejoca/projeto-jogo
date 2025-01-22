@@ -1,4 +1,6 @@
 let perguntas = [];
+let perguntasRespondidas = 0; // Contador para as perguntas respondidas
+let respostasCorretas = 0; // Contador para as respostas corretas
 
 async function carregarPerguntas() {
     try {
@@ -13,6 +15,13 @@ async function carregarPerguntas() {
 }
 
 function carregarPergunta() {
+    if (perguntasRespondidas >= 10) {
+        // Se o jogador já respondeu 10 perguntas, finaliza o quiz
+        document.getElementById('pergunta').textContent = "Fim do quiz! Você respondeu " + respostasCorretas + " perguntas corretamente. Obrigado por jogar!";
+        document.getElementById('respostas').innerHTML = ''; // Remove os botões de resposta
+        return;
+    }
+
     if (perguntas.length === 0) {
         // Se não houver mais perguntas, encerra o jogo
         document.getElementById('pergunta').textContent = "Fim do quiz! Obrigado por jogar!";
@@ -40,10 +49,13 @@ function carregarPergunta() {
 
 function verificarResposta(respostaSelecionada, respostaCorreta) {
     if (respostaSelecionada === respostaCorreta) {
+        respostasCorretas++; // Incrementa as respostas corretas
         alert('Resposta correta!');
     } else {
         alert('Resposta incorreta. A correta era: ' + respostaCorreta);
     }
+    
+    perguntasRespondidas++; // Incrementa o contador de perguntas respondidas
     carregarPergunta(); // Nova pergunta
 }
 
