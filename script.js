@@ -27,6 +27,8 @@ function inicializarProgresso() {
 
 function carregarPergunta() {
     if (perguntasRespondidas >= 5) {
+        const texto = document.querySelector("p.txt");
+        texto.style.display = 'none';
         // Se o jogador já respondeu 5 perguntas, finaliza o quiz
         document.getElementById('pergunta').textContent = 
             `Fim do quiz! Você respondeu ${respostasCorretas} de 5 perguntas corretamente. Obrigado por jogar!`;
