@@ -14,7 +14,7 @@
     {
         "pergunta": "Qual é a diferença entre let e var?",
         "respostas": ["let tem escopo de bloco, enquanto var tem escopo de função","Não há diferença","Ambos têm escopo global","let é usado para constantes, var para variáveis"],
-        "correta": "et tem escopo de bloco, enquanto var tem escopo de função"
+        "correta": "let tem escopo de bloco, enquanto var tem escopo de função"
     },
 
     {
@@ -62,5 +62,11 @@
         "pergunta": "Qual é a tag HTML usada para inserir uma linha horizontal na página?",
         "respostas": ["<line>","<hr>","<br>","<border>"],
         "correta": "<hr>"
+    },
+
+    {
+        "pergunta": "Qual unidade é usada para tamanhos relativos à largura da janela de visualização?",
+        "respostas": ["em", "%", "vw", "vh"],
+        "correta": "vw"
     }
 ]
