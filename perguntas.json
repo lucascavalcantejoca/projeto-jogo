@@ -68,5 +68,36 @@
         "pergunta": "Qual unidade é usada para tamanhos relativos à largura da janela de visualização?",
         "respostas": ["em", "%", "vw", "vh"],
         "correta": "vw"
+    }, 
+
+    {
+        "pergunta": "Qual é o propósito do atributo alt em uma tag <img>?",
+        "respostas": ["Adicionar uma descrição visível à imagem", " Exibir texto alternativo se a imagem não carregar", "Aplicar estilos CSS na imagem", "Melhorar a acessibilidade para leitores de tela"],
+        "correta": "Exibir texto alternativo se a imagem não carregar"
+    },
+
+    {
+        "pergunta": "Qual método é usado para exibir uma mensagem no console?",
+        "respostas": ["alert()", "console.log()", "document.write()", "console.alert()"],
+        "correta": "console.log()"
+    },
+
+    {
+        "pergunta": "Qual é a diferença entre a tag <div> e a tag <section>?",
+        "respostas": ["<div> é usada apenas para imagens", "Não há diferença entre elas", "<section> tem um significado semântico, enquanto <div> não", "<div> é mais específica para formatação de layout"],
+        "correta": "<section> tem um significado semântico, enquanto <div> não"
+    },
+
+    {
+        "pergunta": "Como definir um plano de fundo com uma imagem no CSS?",
+        "respostas": ["background-image: url('caminho/da/imagem');", "background-color: url('caminho/da/imagem');", "background-style: image('caminho/da/imagem');", "image-background: url('caminho/da/imagem');"],
+        "correta": "background-image: url('caminho/da/imagem');"
+    },
+
+    {
+        "pergunta": "Qual propriedade CSS é usada para arredondar os cantos de um elemento?",
+        "respostas": ["corner-radius", "border-corner", "radius-corner", "border-radius"],
+        "correta": "border-radius"
     }
+    
 ]

@@ -60,3 +60,27 @@ button:active {
     transform: scale(.95);
 }
 
+#barra-progresso {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.quadrado {
+    width: 30px;
+    height: 30px;
+    background-color: lightgray;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.quadrado.correto {
+    background-color: green;
+}
+
+.quadrado.errado {
+    background-color: red;
+}
+
+
