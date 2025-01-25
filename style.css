@@ -127,7 +127,7 @@ button:disabled {
 
 #gif-container {
     position: absolute; 
-    top: 20%; 
+    top: 17%; 
     left: 50%; 
     transform: translateX(-50%); 
     text-align: center;  
@@ -136,6 +136,7 @@ button:disabled {
 }
 
 #gif-container img {
+    height: 26em;
     width: 100%; 
     max-width: 500px; 
     border-radius: 10px; 
