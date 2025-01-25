@@ -1,33 +1,62 @@
 @charset "UTF-8";
 
 body {
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    margin: 0px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #FFF1E6;
+    
+}
+
+h1 {
+    font-size: 2.5rem; 
+    margin: 0; 
+    text-align: center;
 }
 
 .perguntas {
-    font-size: xx-large;
+    font-size: 1.8rem;
+    margin: 20px 0; 
+    text-align: center;
 }
+
 
 .txt {
-    font-size: x-large;
-    margin-top: -30px;
+    font-size: 1.2rem;
+    margin: 15px 0; 
+    color: #FF6F61; 
+    text-align: center;
+    font-style: italic;
+
 }
 
-#prox-perg {
-    display: none;
+#botao-proxima {
+    position: relative; 
+    margin-top: 20px; 
+    background-color: #FF6F61;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+    
 }
 
 #respostas {
-    background-color: rgb(104, 104, 104);
+    background-color: #3A3A4D;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100vw;
+    width: 100%;
     height: 30vh;
-    transform: translateY(1em);
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.432);
+    border-radius: 50px 50px 0 0;
     
 }
 
@@ -38,7 +67,7 @@ button {
     border-radius: 10px;
     border: none;
 
-    background-color: rgb(0, 132, 255);
+    background-color: #FF6F61;
     color: white;
     justify-self: center;
     
@@ -52,18 +81,22 @@ button {
 
 button:hover {
     cursor: pointer;
-    background-color: rgb(0, 112, 216);
+    background-color: #6B705C;
     transform: scale(1.1);
 }
 
 button:active {
     transform: scale(.95);
+    background-color: #1C4680;
 }
 
 #barra-progresso {
+    position: fixed;
+    top: 5px;
+    left: 10px;
     display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
+    justify-content: end;
+    margin-top: 20px;
 }
 
 .quadrado {
@@ -82,5 +115,3 @@ button:active {
 .quadrado.errado {
     background-color: red;
 }
-
-

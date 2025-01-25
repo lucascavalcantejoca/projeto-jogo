@@ -72,7 +72,7 @@
 
     {
         "pergunta": "Qual é o propósito do atributo alt em uma tag <img>?",
-        "respostas": ["Adicionar uma descrição visível à imagem", " Exibir texto alternativo se a imagem não carregar", "Aplicar estilos CSS na imagem", "Melhorar a acessibilidade para leitores de tela"],
+        "respostas": ["Adicionar uma descrição visível à imagem", "Exibir texto alternativo se a imagem não carregar", "Aplicar estilos CSS na imagem", "Melhorar a acessibilidade para leitores de tela"],
         "correta": "Exibir texto alternativo se a imagem não carregar"
     },
 

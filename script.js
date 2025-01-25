@@ -1,15 +1,15 @@
 let perguntas = [];
 let perguntasRespondidas = 0;
 let respostasCorretas = 0;
+let botaoRespostas = [];
 
 async function carregarPerguntas() {
     try {
-        // Faz a requisição do arquivo JSON
         const response = await fetch('perguntas.json');
-        perguntas = await response.json(); // Converte o JSON para um array de objetos
+        perguntas = await response.json(); 
         
-        inicializarProgresso(); // Configura a barra de progresso
-        carregarPergunta(); // Carrega a primeira pergunta
+        inicializarProgresso(); 
+        carregarPergunta(); 
     } catch (error) {
         console.error('Erro ao carregar o arquivo JSON:', error);
     }
@@ -17,7 +17,7 @@ async function carregarPerguntas() {
 
 function inicializarProgresso() {
     const barraProgresso = document.getElementById('barra-progresso');
-    barraProgresso.innerHTML = ''; // Limpa progresso anterior
+    barraProgresso.innerHTML = ''; 
     for (let i = 0; i < 5; i++) {
         const quadrado = document.createElement('div');
         quadrado.classList.add('quadrado');
@@ -27,39 +27,37 @@ function inicializarProgresso() {
 
 function carregarPergunta() {
     if (perguntasRespondidas >= 5) {
-        const texto = document.querySelector("p.txt");
-        texto.style.display = 'none';
-        // Se o jogador já respondeu 5 perguntas, finaliza o quiz
+        
         document.getElementById('pergunta').textContent = 
             `Fim do quiz! Você respondeu ${respostasCorretas} de 5 perguntas corretamente. Obrigado por jogar!`;
-        document.getElementById('respostas').innerHTML = ''; // Remove os botões de resposta
-        document.getElementById('botao-proxima').style.display = 'none'; // Esconde o botão "Próxima"
+        document.getElementById('respostas').innerHTML = ''; 
         return;
     }
 
     const indiceAleatorio = Math.floor(Math.random() * perguntas.length);
     const perguntaSelecionada = perguntas[indiceAleatorio];
 
-    // Remove a pergunta do array para evitar repetição
+    
     perguntas.splice(indiceAleatorio, 1);
 
     document.getElementById('pergunta').textContent = perguntaSelecionada.pergunta;
 
     const respostasContainer = document.getElementById('respostas');
-    respostasContainer.innerHTML = ''; // Limpa respostas anteriores
+    respostasContainer.innerHTML = ''; 
+
+    botaoRespostas = []; 
+
     perguntaSelecionada.respostas.forEach(resposta => {
         const btn = document.createElement('button');
         btn.textContent = resposta;
         btn.onclick = () => verificarResposta(resposta, perguntaSelecionada.correta);
         respostasContainer.appendChild(btn);
+        botaoRespostas.push(btn);
     });
 
-    // Esconde o botão "Próxima" até que o usuário responda a pergunta
-    document.getElementById('botao-proxima').style.display = 'none';
+    habilitarBotoes(true);
 
-    // Limpa a mensagem de feedback
-    const texto = document.querySelector("p.txt");
-    texto.textContent = '';
+    document.querySelector("p.txt").textContent = '';
 }
 
 function verificarResposta(respostaSelecionada, respostaCorreta) {
@@ -74,15 +72,25 @@ function verificarResposta(respostaSelecionada, respostaCorreta) {
         atualizarProgresso(false);
     }
 
-    // Exibe o botão "Próxima" após a resposta
-    document.getElementById('botao-proxima').style.display = 'block';
+    perguntasRespondidas++;
+
+    
+    habilitarBotoes(false);
+
+    document.getElementById('botao-proxima').style.display = 'block'; 
+}
+
+function habilitarBotoes(estado) {
+    
+    botaoRespostas.forEach(botao => {
+        botao.disabled = !estado;
+    });
 }
 
 function atualizarProgresso(respostaCorreta) {
     const quadrados = document.querySelectorAll('.quadrado');
-    const quadradoAtual = quadrados[perguntasRespondidas]; // Baseado no índice da pergunta atual
+    const quadradoAtual = quadrados[perguntasRespondidas]; 
 
-    // Atualiza o progresso somente quando o botão "Próxima" for clicado
     if (respostaCorreta) {
         quadradoAtual.classList.add('correto');
     } else {
@@ -91,8 +99,11 @@ function atualizarProgresso(respostaCorreta) {
 }
 
 function carregarProximaPergunta() {
-    perguntasRespondidas++; // Incrementa o contador de perguntas respondidas
-    carregarPergunta(); // Carrega a próxima pergunta
+    
+    document.querySelector("p.txt").textContent = '';
+
+    document.getElementById('botao-proxima').style.display = 'none'; 
+    carregarPergunta(); 
 }
 
-window.onload = carregarPerguntas; // Inicia carregando as perguntas do JSON
+window.onload = carregarPerguntas; 
