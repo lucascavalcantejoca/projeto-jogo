@@ -7,13 +7,14 @@ body {
     align-items: center; 
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #FFF1E6;
-    color: #1A1A1A;
+    
     
 }
 
-h1 {
-    font-size: 2.5rem; 
+.h1Jogo {
+    font-size: 2.5rem;
+    color: #FF6F61;
+    text-align: center;
     
 }
 
@@ -21,6 +22,7 @@ h1 {
     font-size: 1.8rem;
     margin: 20px 0; 
     text-align: center;
+    color: #FFF1E6;
 }
 
 
@@ -29,7 +31,7 @@ h1 {
     margin: 15px 0; 
     text-align: center;
     font-style: italic;
-
+    color: #FF6F61;
 }
 
 #botao-proxima {
@@ -132,13 +134,14 @@ button:disabled {
     transform: translateX(-50%); 
     text-align: center;  
     width: 100%; 
-    max-width: 600px; 
+    max-width: 600px;
+    margin-top: 50px; 
 }
 
 #gif-container img {
-    height: 26em;
+    height: 28em;
     width: 100%; 
     max-width: 500px; 
     border-radius: 10px; 
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.418);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.452);
 }

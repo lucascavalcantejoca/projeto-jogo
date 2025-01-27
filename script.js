@@ -51,7 +51,8 @@ function carregarPergunta() {
         document.getElementById('pergunta').textContent = 
             `Fim do quiz! Você respondeu ${respostasCorretas} de 5 perguntas corretamente. Obrigado por jogar!`;
         document.getElementById('respostas').innerHTML = ''; 
-        habilitarBotoes(false); // Desabilitar todos os botões ao fim do quiz
+        habilitarBotoes(false);
+        document.querySelector('div#respostas').style.display = 'none';
 
         if (respostasCorretas === 5) {
             obterGifDeGato(); // Só chamar o gif se o usuário acertou todas as questões

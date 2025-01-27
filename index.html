@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bla</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pagInicial.css">
 </head>
 <body>
-        <h1>WebDev Quiz</h1>
+    <div class="background">
+        <h1 class="h1Jogo">WebDev Quiz</h1>
         <div id="barra-progresso"></div>
-    <div class="perguntas">
-        <p id="pergunta">Carregando pergunta...</p>
+            <div class="perguntas">
+                <p id="pergunta">Carregando pergunta...</p>
+            </div>
+            <p class="txt"></p>
+            <button id="botao-proxima" style="display: none;" onclick="carregarProximaPergunta()">Próxima</button>
+            <div id="gif-container"></div>
+            <div id="respostas"></div>
     </div>
-    <p class="txt"></p>
-    <button id="botao-proxima" style="display: none;" onclick="carregarProximaPergunta()">Próxima</button>
-    <div id="gif-container"></div>
-    <div id="respostas"></div>
     <script src="script.js"></script>
 </body>
 </html>
