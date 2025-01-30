@@ -5,7 +5,7 @@ let botaoRespostas = [];
 
 async function carregarPerguntas() {
     try {
-        const response = await fetch('perguntas.json');
+        const response = await fetch('../perguntas.json');
         perguntas = await response.json(); 
         
         inicializarProgresso(); 
